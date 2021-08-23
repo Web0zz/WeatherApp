@@ -6,4 +6,6 @@
     <string name="wind">Wind</string>
     <string name="chance_of_rain">Chance of rain</string>
     <string name="weather_state">Weather state</string>
+    <string name="location_icon">Location icon</string>
+    <string name="day_weather_state_icon">Day weather state icon</string>
 </resources>
