@@ -229,6 +229,33 @@
         </LinearLayout>
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/today_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"
+        android:text="@string/today"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/days_recyclerView"
+        app:layout_constraintStart_toStartOf="@+id/days_recyclerView"
+        app:layout_constraintTop_toTopOf="@+id/next_days_buttonView" />
+
+    <Button
+        android:id="@+id/next_days_buttonView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:text="@string/next_7_days"
+        android:textAllCaps="false"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        app:icon="@drawable/ic_next_icon"
+        app:iconGravity="end"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/days_recyclerView"
+        app:layout_constraintEnd_toEndOf="@+id/days_recyclerView" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/days_recyclerView"
         android:layout_width="match_parent"
