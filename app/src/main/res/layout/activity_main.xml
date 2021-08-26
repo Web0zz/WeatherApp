@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black_background"
+    android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
     <ImageView
@@ -40,6 +41,7 @@
             android:alpha="0.8"
             android:fontFamily="@font/rubik_light"
             android:textColor="@color/white"
+            android:textSize="16sp"
             tools:text="22, Feb 2021" />
 
         <LinearLayout
@@ -63,6 +65,7 @@
                 android:layout_marginStart="3dp"
                 android:fontFamily="@font/rubik_regular"
                 android:textColor="@color/white"
+                android:textSize="16sp"
                 tools:text="LONDON," />
 
             <TextView
@@ -73,6 +76,7 @@
                 android:alpha="0.7"
                 android:fontFamily="@font/rubik_light"
                 android:textColor="@color/white"
+                android:textSize="16sp"
                 tools:text="England" />
         </LinearLayout>
     </LinearLayout>
@@ -82,7 +86,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
-        android:textSize="22sp"
+        android:textSize="24sp"
         android:fontFamily="@font/rubik_regular"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="@+id/background_imageView"
@@ -120,9 +124,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
-            android:textSize="21sp"
-            tools:text="Sunny"
-            android:fontFamily="@font/rubik_light"/>
+            android:textSize="24sp"
+            android:fontFamily="@font/rubik_light"
+            tools:text="Sunny"/>
 
         <TextView
             android:id="@+id/degree_textView"
@@ -130,8 +134,8 @@
             android:layout_height="wrap_content"
             android:textColor="@color/white"
             android:textSize="80sp"
-            tools:text="30°"
-            android:fontFamily="@font/rubik_regular"/>
+            android:fontFamily="@font/rubik_regular"
+            tools:text="30°"/>
 
     </LinearLayout>
 
@@ -140,7 +144,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="20dp"
         android:baselineAligned="false"
         android:gravity="center"
@@ -169,8 +173,10 @@
                 android:id="@+id/wind_value_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
                 android:textColor="@color/white"
-                android:textSize="14sp"
+                android:textSize="18sp"
+                android:fontFamily="@font/rubik_regular"
                 tools:text="13 km/j" />
 
             <TextView
@@ -179,7 +185,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:textColor="@color/white"
-                android:text="@string/wind"/>
+                android:text="@string/wind"
+                android:textSize="16sp"
+                android:fontFamily="@font/rubik_light"/>
         </LinearLayout>
 
         <LinearLayout
@@ -201,8 +209,10 @@
                 android:id="@+id/humidity_value_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
                 android:textColor="@color/white"
-                android:textSize="14sp"
+                android:textSize="18sp"
+                android:fontFamily="@font/rubik_regular"
                 tools:text="24%" />
 
             <TextView
@@ -211,7 +221,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:textColor="@color/white"
-                android:text="@string/humidity" />
+                android:text="@string/humidity"
+                android:textSize="16sp"
+                android:fontFamily="@font/rubik_light"/>
         </LinearLayout>
 
         <LinearLayout
@@ -233,8 +245,10 @@
                 android:id="@+id/chance_of_rain_value_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
                 android:textColor="@color/white"
-                android:textSize="14sp"
+                android:textSize="18sp"
+                android:fontFamily="@font/rubik_regular"
                 tools:text="87%" />
 
             <TextView
@@ -243,7 +257,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:textColor="@color/white"
-                android:text="@string/chance_of_rain" />
+                android:text="@string/chance_of_rain"
+                android:textSize="16sp"
+                android:fontFamily="@font/rubik_light"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -253,8 +269,8 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/rubik_regular"
         android:text="@string/today"
+        android:textSize="20sp"
         android:textColor="@color/white"
-        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/next_days_buttonView"
         app:layout_constraintStart_toStartOf="@+id/days_recyclerView"
         app:layout_constraintTop_toTopOf="@+id/next_days_buttonView" />
@@ -263,9 +279,10 @@
         android:id="@+id/next_days_buttonView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
+        android:layout_marginBottom="4dp"
         android:textColor="@color/white"
         android:text="@string/next_7_days"
+        android:textSize="20sp"
         android:textAllCaps="false"
         android:fontFamily="@font/rubik_regular"
         style="@style/Widget.MaterialComponents.Button.TextButton"
@@ -281,6 +298,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
+        android:layout_marginTop="40dp"
         android:orientation="horizontal"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"

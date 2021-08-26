@@ -20,7 +20,10 @@
             android:id="@+id/hour_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="8dp"
             android:textColor="@color/white"
+            android:textSize="20sp"
+            android:fontFamily="@font/rubik_regular"
             android:alpha="0.7"
             tools:text="12:00"/>
 
@@ -29,19 +32,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/day_weather_state_icon"
-            android:textColor="@color/white"
             tools:src="@drawable/ic_rain"/>
 
         <TextView
             android:id="@+id/hour_degree_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="8dp"
             android:textColor="@color/white"
-            android:textSize="18sp"
+            android:textSize="20sp"
+            android:fontFamily="@font/rubik_regular"
             tools:text="28°"/>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
     </LinearLayout>
 </androidx.cardview.widget.CardView>
