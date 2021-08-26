@@ -10,4 +10,5 @@
 
     <color name="black_background">#171616</color>
     <color name="light_black_background">#242222</color>
+    <color name="orange">#F49C0C</color>
 </resources>

@@ -1,8 +1,10 @@
 package com.web0zz.weatherapp.adapter
 
+import android.content.res.Resources
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.web0zz.weatherapp.R
 import com.web0zz.weatherapp.data.WeatherData
 import com.web0zz.weatherapp.databinding.WeatherByHourBinding
 
@@ -25,8 +27,10 @@ class WeatherByHourAdapter(
                 binding.hoursWeatherCardView.setOnClickListener {
                     onClickListener.onClick(this)
                 }
+                val degreeText = "$degree°"
+
                 binding.hourTextView.text = hour
-                binding.hourDegreeTextView.text = degree
+                binding.hourDegreeTextView.text = degreeText
                 binding.hourWeatherStateIconImageView.setImageResource(state)
             }
         }

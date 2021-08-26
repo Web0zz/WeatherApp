@@ -110,10 +110,10 @@
 
     <LinearLayout
         android:id="@+id/weather_info_linearLayout"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="250dp"
-        android:gravity="center"
+        android:gravity="center_horizontal"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="@+id/weather_state_imageView"
         app:layout_constraintStart_toStartOf="@+id/weather_state_imageView"
@@ -128,15 +128,32 @@
             android:fontFamily="@font/rubik_light"
             tools:text="Sunny"/>
 
-        <TextView
-            android:id="@+id/degree_textView"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:textSize="80sp"
-            android:fontFamily="@font/rubik_regular"
-            tools:text="30°"/>
+            android:layout_gravity="center_horizontal"
+            android:weightSum="2">
 
+            <TextView
+                android:id="@+id/degree_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:textSize="80sp"
+                android:fontFamily="@font/rubik_regular"
+                tools:text="30"/>
+
+            <TextView
+                android:id="@+id/degree_dot_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/orange"
+                android:text="@string/degree_dot"
+                android:textSize="80sp"
+                android:fontFamily="@font/rubik_regular" />
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
