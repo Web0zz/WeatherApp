@@ -24,11 +24,12 @@
         android:contentDescription="@string/map_content" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="20dp"
         android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -36,9 +37,10 @@
             android:id="@+id/date_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
             android:alpha="0.8"
-            tools:text="22, Feb 2021"/>
+            android:fontFamily="@font/rubik_light"
+            android:textColor="@color/white"
+            tools:text="22, Feb 2021" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -50,8 +52,8 @@
                 android:id="@+id/location_icon_imageView"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:src="@drawable/ic_placeholder"
                 android:contentDescription="@string/location_icon"
+                android:src="@drawable/ic_placeholder"
                 app:tint="@color/white" />
 
             <TextView
@@ -59,19 +61,33 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="3dp"
+                android:fontFamily="@font/rubik_regular"
                 android:textColor="@color/white"
-                tools:text="London,"/>
+                tools:text="LONDON," />
 
             <TextView
                 android:id="@+id/location_country_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:textColor="@color/white"
                 android:alpha="0.7"
-                tools:text="England"/>
+                android:fontFamily="@font/rubik_light"
+                android:textColor="@color/white"
+                tools:text="England" />
         </LinearLayout>
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/hour_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:fontFamily="@font/rubik_regular"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="@+id/background_imageView"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        tools:text="18:00" />
 
     <ImageView
         android:id="@+id/weather_state_imageView"
@@ -105,7 +121,8 @@
             android:layout_height="wrap_content"
             android:textColor="@color/white"
             android:textSize="21sp"
-            tools:text="Sunny" />
+            tools:text="Sunny"
+            android:fontFamily="@font/rubik_light"/>
 
         <TextView
             android:id="@+id/degree_textView"
@@ -113,7 +130,8 @@
             android:layout_height="wrap_content"
             android:textColor="@color/white"
             android:textSize="80sp"
-            tools:text="30°" />
+            tools:text="30°"
+            android:fontFamily="@font/rubik_regular"/>
 
     </LinearLayout>
 
@@ -161,7 +179,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:textColor="@color/white"
-                tools:text="Wind" />
+                android:text="@string/wind"/>
         </LinearLayout>
 
         <LinearLayout
@@ -193,7 +211,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:textColor="@color/white"
-                tools:text="Humidity" />
+                android:text="@string/humidity" />
         </LinearLayout>
 
         <LinearLayout
@@ -225,7 +243,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:textColor="@color/white"
-                tools:text="Chance of rain" />
+                android:text="@string/chance_of_rain" />
         </LinearLayout>
     </LinearLayout>
 
@@ -233,11 +251,11 @@
         android:id="@+id/today_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="11dp"
+        android:fontFamily="@font/rubik_regular"
         android:text="@string/today"
         android:textColor="@color/white"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/days_recyclerView"
+        app:layout_constraintBottom_toBottomOf="@+id/next_days_buttonView"
         app:layout_constraintStart_toStartOf="@+id/days_recyclerView"
         app:layout_constraintTop_toTopOf="@+id/next_days_buttonView" />
 
@@ -249,6 +267,7 @@
         android:textColor="@color/white"
         android:text="@string/next_7_days"
         android:textAllCaps="false"
+        android:fontFamily="@font/rubik_regular"
         style="@style/Widget.MaterialComponents.Button.TextButton"
         app:icon="@drawable/ic_next_icon"
         app:iconGravity="end"
@@ -261,9 +280,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="10dp"
         android:orientation="horizontal"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"

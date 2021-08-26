@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
         binding.dateTextView.text = weatherData.date
         binding.locationCityTextView.text = weatherData.city
         binding.locationCountryTextView.text = weatherData.country
+        binding.hourTextView.text = weatherData.hour
         binding.weatherStateImageView.setImageResource(weatherData.state)
         binding.weatherStateTextView.text = weatherData.state_text
         binding.degreeTextView.text = weatherData.degree
