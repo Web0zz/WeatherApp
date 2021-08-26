@@ -41,8 +41,8 @@ val dummyData = listOf(
         date = "27, Feb 2021"
     ),
     WeatherData(
-        state = R.drawable.ic_partly_cloudy_day_snow,
-        state_text = "Partly Cloudy Snow",
+        state = R.drawable.ic_rain,
+        state_text = "Rain",
         city = "Istanbul",
         country = "Turkey",
         degree = "32",
@@ -53,8 +53,8 @@ val dummyData = listOf(
         date = "27, Feb 2021"
     ),
     WeatherData(
-        state = R.drawable.ic_partly_cloudy_day_snow,
-        state_text = "Partly Cloudy Snow",
+        state = R.drawable.ic_rain,
+        state_text = "Rain",
         city = "Istanbul",
         country = "Turkey",
         degree = "32",

@@ -97,11 +97,12 @@
         android:id="@+id/weather_state_imageView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="100dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginEnd="100dp"
         android:layout_marginBottom="10dp"
         android:contentDescription="@string/weather_state"
+        android:background="@drawable/gradient"
         app:layout_constraintBottom_toTopOf="@+id/weather_info_linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -110,7 +111,7 @@
 
     <LinearLayout
         android:id="@+id/weather_info_linearLayout"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="250dp"
         android:gravity="center_horizontal"
