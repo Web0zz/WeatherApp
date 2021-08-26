@@ -35,8 +35,9 @@ class MainActivity : AppCompatActivity() {
         binding.weatherStateImageView.setImageResource(weatherData.state)
         binding.weatherStateTextView.text = weatherData.state_text
         binding.degreeTextView.text = weatherData.degree
+        binding.precipitationValueTextView.text = weatherData.precipitation
         binding.windValueTextView.text = weatherData.wind
         binding.humidityValueTextView.text = weatherData.humidity
-        binding.chanceOfRainValueTextView.text = weatherData.precipitation
+        binding.pressureValueTextView.text = weatherData.pressure
     }
 }

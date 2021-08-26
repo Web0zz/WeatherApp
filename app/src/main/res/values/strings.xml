@@ -2,13 +2,14 @@
     <string name="app_name">WeatherApp</string>
 
     <string name="map_content">World Map</string>
-    <string name="humidity">Humidity</string>
-    <string name="wind">Wind</string>
-    <string name="chance_of_rain">Chance of rain</string>
     <string name="weather_state">Weather state</string>
     <string name="location_icon">Location icon</string>
     <string name="day_weather_state_icon">Day weather state icon</string>
     <string name="next_7_days">Next 7 Days</string>
     <string name="today">Today</string>
     <string name="degree_dot">°</string>
+    <string name="precipitation">Precipitation</string>
+    <string name="wind">Wind</string>
+    <string name="humidity">Humidity</string>
+    <string name="pressure">Pressure</string>
 </resources>
