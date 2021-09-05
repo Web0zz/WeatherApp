@@ -133,5 +133,44 @@ val dummyData = listOf(
         pressure = "800hPa",
         hour = "20:00",
         date = "27, Feb 2021"
+    ),
+    WeatherData(
+        state = R.drawable.ic_thunderstorms_night,
+        state_text = "Rain Thunderstorms",
+        city = "Istanbul",
+        country = "Turkey",
+        degree = "27",
+        wind = "13 km/h",
+        humidity = "24%",
+        precipitation = "87%",
+        pressure = "800hPa",
+        hour = "21:00",
+        date = "27, Feb 2021"
+    ),
+    WeatherData(
+        state = R.drawable.ic_thunderstorms_night,
+        state_text = "Rain Thunderstorms",
+        city = "Istanbul",
+        country = "Turkey",
+        degree = "27",
+        wind = "13 km/h",
+        humidity = "24%",
+        precipitation = "87%",
+        pressure = "800hPa",
+        hour = "22:00",
+        date = "27, Feb 2021"
+    ),
+    WeatherData(
+        state = R.drawable.ic_thunderstorms_night,
+        state_text = "Rain Thunderstorms",
+        city = "Istanbul",
+        country = "Turkey",
+        degree = "27",
+        wind = "13 km/h",
+        humidity = "24%",
+        precipitation = "87%",
+        pressure = "800hPa",
+        hour = "23:00",
+        date = "27, Feb 2021"
     )
 )
