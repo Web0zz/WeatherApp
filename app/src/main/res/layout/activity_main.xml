@@ -93,7 +93,7 @@
         app:layout_constraintTop_toTopOf="@+id/linearLayout"
         tools:text="18:00" />
 
-    <ImageView
+    <pl.droidsonroids.gif.GifImageView
         android:id="@+id/weather_state_imageView"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -161,42 +161,42 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="50dp"
         android:layout_marginEnd="20dp"
         android:layout_weight="4"
+        android:baselineAligned="false"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/next_days_buttonView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/weather_info_linearLayout"
-        android:baselineAligned="false">
+        app:layout_constraintTop_toBottomOf="@+id/weather_info_linearLayout">
 
         <LinearLayout
             android:id="@+id/precipitation_linearLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
+            android:gravity="center_horizontal"
             android:orientation="vertical"
-            android:gravity="center_horizontal">
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
 
             <ImageView
                 android:id="@+id/precipitation_imageView"
                 android:layout_width="42dp"
                 android:layout_height="42dp"
-                android:src="@drawable/ic_precipitation"
                 android:alpha="0.7"
-                app:tint="@color/white"
-                android:contentDescription="@string/precipitation"/>
+                android:contentDescription="@string/precipitation"
+                android:src="@drawable/ic_precipitation"
+                app:tint="@color/white" />
 
             <TextView
                 android:id="@+id/precipitation_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/precipitation"
-                android:textSize="15sp"
                 android:alpha="0.8"
-                android:textColor="@color/white"/>
+                android:text="@string/precipitation"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/precipitation_value_textView"
@@ -204,7 +204,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:textSize="15sp"
-                tools:text="35%"/>
+                tools:text="35%" />
 
         </LinearLayout>
 
@@ -213,36 +213,36 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
+            android:gravity="center_horizontal"
             android:orientation="vertical"
-            android:gravity="center_horizontal">
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
 
             <ImageView
                 android:id="@+id/wind_imageView"
                 android:layout_width="42dp"
                 android:layout_height="42dp"
-                android:src="@drawable/ic_wind"
                 android:alpha="0.7"
-                app:tint="@color/white"
-                android:contentDescription="@string/wind"/>
+                android:contentDescription="@string/wind"
+                android:src="@drawable/ic_wind"
+                app:tint="@color/white" />
 
             <TextView
                 android:id="@+id/wind_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/wind"
-                android:textSize="15sp"
                 android:alpha="0.8"
-                android:textColor="@color/white"/>
+                android:text="@string/wind"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/wind_value_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="15sp"
                 android:textColor="@color/white"
-                tools:text="14 km/h"/>
+                android:textSize="15sp"
+                tools:text="14 km/h" />
 
         </LinearLayout>
 
@@ -251,36 +251,36 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
+            android:gravity="center_horizontal"
             android:orientation="vertical"
-            android:gravity="center_horizontal">
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
 
             <ImageView
                 android:id="@+id/humidity_imageView"
                 android:layout_width="42dp"
                 android:layout_height="42dp"
-                android:src="@drawable/ic_humidity"
                 android:alpha="0.7"
-                app:tint="@color/white"
-                android:contentDescription="@string/humidity"/>
+                android:contentDescription="@string/humidity"
+                android:src="@drawable/ic_humidity"
+                app:tint="@color/white" />
 
             <TextView
                 android:id="@+id/humidity_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/humidity"
-                android:textSize="15sp"
                 android:alpha="0.8"
-                android:textColor="@color/white"/>
+                android:text="@string/humidity"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/humidity_value_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="15sp"
                 android:textColor="@color/white"
-                tools:text="15%"/>
+                android:textSize="15sp"
+                tools:text="15%" />
 
         </LinearLayout>
 
@@ -289,36 +289,36 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
+            android:gravity="center_horizontal"
             android:orientation="vertical"
-            android:gravity="center_horizontal">
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
 
             <ImageView
                 android:id="@+id/pressure_imageView"
                 android:layout_width="42dp"
                 android:layout_height="42dp"
-                android:src="@drawable/ic_pressure"
                 android:alpha="0.7"
-                app:tint="@color/white"
-                android:contentDescription="@string/pressure" />
+                android:contentDescription="@string/pressure"
+                android:src="@drawable/ic_pressure"
+                app:tint="@color/white" />
 
             <TextView
                 android:id="@+id/pressure_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/pressure"
-                android:textSize="15sp"
                 android:alpha="0.8"
-                android:textColor="@color/white"/>
+                android:text="@string/pressure"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/pressure_value_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="15sp"
                 android:textColor="@color/white"
-                tools:text="840hPa"/>
+                android:textSize="15sp"
+                tools:text="840hPa" />
 
         </LinearLayout>
     </LinearLayout>
@@ -359,12 +359,12 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginTop="40dp"
+        android:layout_marginBottom="30dp"
         android:orientation="horizontal"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detail_linearLayout"
         tools:itemCount="12"
         tools:listitem="@layout/weather_by_hour" />
 

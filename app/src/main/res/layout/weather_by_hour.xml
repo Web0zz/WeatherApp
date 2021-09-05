@@ -20,27 +20,27 @@
             android:id="@+id/hour_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="8dp"
+            android:padding="6dp"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:fontFamily="@font/rubik_regular"
             android:alpha="0.7"
             tools:text="12:00"/>
 
-        <ImageView
+        <pl.droidsonroids.gif.GifImageView
             android:id="@+id/hour_weather_state_icon_imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/day_weather_state_icon"
-            tools:src="@drawable/ic_rain"/>
+            tools:src="@drawable/small"/>
 
         <TextView
             android:id="@+id/hour_degree_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="8dp"
+            android:padding="6dp"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:fontFamily="@font/rubik_regular"
             tools:text="28°"/>
     </LinearLayout>
