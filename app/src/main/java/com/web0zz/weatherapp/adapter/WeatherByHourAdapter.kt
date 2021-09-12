@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.web0zz.weatherapp.data.WeatherData
-import com.web0zz.weatherapp.databinding.WeatherByHourBinding
+import com.web0zz.weatherapp.databinding.ViewWeatherByHourBinding
 
 class WeatherByHourAdapter(
     private val hoursList: List<WeatherData>,
@@ -12,7 +12,7 @@ class WeatherByHourAdapter(
 ): RecyclerView.Adapter<WeatherByHourAdapter.WeatherByHourViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WeatherByHourViewHolder {
-        val binding = WeatherByHourBinding
+        val binding = ViewWeatherByHourBinding
             .inflate(LayoutInflater.from(parent.context), parent, false)
         return WeatherByHourViewHolder(binding)
     }
@@ -34,7 +34,7 @@ class WeatherByHourAdapter(
         }
     }
 
-    inner class WeatherByHourViewHolder(val binding: WeatherByHourBinding)
+    inner class WeatherByHourViewHolder(val binding: ViewWeatherByHourBinding)
         :RecyclerView.ViewHolder(binding.root)
 
     class WeatherClickListener(val clickListener: (weather: WeatherData) -> Unit) {

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/black_background">
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:minWidth="60dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="18dp"
+        android:background="@null"
+        android:src="@drawable/ic_back"
+        app:layout_constraintBottom_toBottomOf="@+id/location_country_textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/back" />
+
+    <ImageView
+        android:id="@+id/location_icon_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="3dp"
+        android:contentDescription="@string/location_icon"
+        android:padding="3dp"
+        android:src="@drawable/ic_placeholder"
+        app:layout_constraintBottom_toBottomOf="@+id/location_city_textView"
+        app:layout_constraintEnd_toStartOf="@+id/location_city_textView"
+        app:layout_constraintTop_toTopOf="@+id/location_city_textView"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/location_city_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="18dp"
+        android:fontFamily="@font/rubik_regular"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="LONDON," />
+
+    <TextView
+        android:id="@+id/location_country_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:alpha="0.7"
+        android:fontFamily="@font/rubik_light"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="@+id/location_city_textView"
+        app:layout_constraintStart_toStartOf="@+id/location_city_textView"
+        app:layout_constraintTop_toBottomOf="@+id/location_city_textView"
+        tools:text="England" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="18dp"
+        android:padding="8dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+        app:layout_constraintVertical_bias="1.0"
+        tools:listitem="@layout/view_weather_by_day" />
+</androidx.constraintlayout.widget.ConstraintLayout>

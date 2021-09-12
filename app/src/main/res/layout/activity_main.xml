@@ -93,7 +93,7 @@
         app:layout_constraintTop_toTopOf="@+id/linearLayout"
         tools:text="18:00" />
 
-    <pl.droidsonroids.gif.GifImageView
+    <ImageView
         android:id="@+id/weather_state_imageView"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -366,6 +366,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:itemCount="12"
-        tools:listitem="@layout/weather_by_hour" />
+        tools:listitem="@layout/view_weather_by_hour" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

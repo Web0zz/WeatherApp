@@ -27,12 +27,12 @@
             android:alpha="0.7"
             tools:text="12:00"/>
 
-        <pl.droidsonroids.gif.GifImageView
+        <ImageView
             android:id="@+id/hour_weather_state_icon_imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/day_weather_state_icon"
-            tools:src="@drawable/small"/>
+            tools:src="@drawable/ic_partly_cloudy_day_drizzle"/>
 
         <TextView
             android:id="@+id/hour_degree_textView"

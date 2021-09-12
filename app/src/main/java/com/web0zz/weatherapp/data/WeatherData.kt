@@ -18,7 +18,7 @@ data class WeatherData(
 
 val dummyData = listOf(
     WeatherData(
-        state = R.drawable.small,
+        state = R.drawable.ic_partly_cloudy_day_drizzle,
         state_text = "Partly Cloudy Drizzle",
         city = "Istanbul",
         country = "Turkey",
@@ -31,7 +31,7 @@ val dummyData = listOf(
         date = "27, Feb 2021"
     ),
     WeatherData(
-        state = R.drawable.small,
+        state = R.drawable.ic_partly_cloudy_day_drizzle,
         state_text = "Partly Cloudy Drizzle",
         city = "Istanbul",
         country = "Turkey",
@@ -44,7 +44,7 @@ val dummyData = listOf(
         date = "27, Feb 2021"
     ),
     WeatherData(
-        state = R.drawable.small,
+        state = R.drawable.ic_rain,
         state_text = "Rain",
         city = "Istanbul",
         country = "Turkey",
@@ -57,7 +57,7 @@ val dummyData = listOf(
         date = "27, Feb 2021"
     ),
     WeatherData(
-        state = R.drawable.small,
+        state = R.drawable.ic_rain,
         state_text = "Rain",
         city = "Istanbul",
         country = "Turkey",
@@ -70,7 +70,7 @@ val dummyData = listOf(
         date = "27, Feb 2021"
     ),
     WeatherData(
-        state = R.drawable.small,
+        state = R.drawable.ic_partly_cloudy_day_snow,
         state_text = "Partly Cloudy Snow",
         city = "Istanbul",
         country = "Turkey",
@@ -83,7 +83,7 @@ val dummyData = listOf(
         date = "27, Feb 2021"
     ),
     WeatherData(
-        state = R.drawable.small,
+        state = R.drawable.ic_partly_cloudy_night_rain,
         state_text = "Partly Cloudy Rain",
         city = "Istanbul",
         country = "Turkey",
@@ -96,7 +96,7 @@ val dummyData = listOf(
         date = "27, Feb 2021"
     ),
     WeatherData(
-        state = R.drawable.small,
+        state = R.drawable.ic_partly_cloudy_night_rain,
         state_text = "Partly Cloudy Rain",
         city = "Istanbul",
         country = "Turkey",
@@ -109,7 +109,7 @@ val dummyData = listOf(
         date = "27, Feb 2021"
     ),
     WeatherData(
-        state = R.drawable.small,
+        state = R.drawable.ic_rain,
         state_text = "Rain",
         city = "Istanbul",
         country = "Turkey",
@@ -122,7 +122,7 @@ val dummyData = listOf(
         date = "27, Feb 2021"
     ),
     WeatherData(
-        state = R.drawable.small,
+        state = R.drawable.ic_thunderstorms_night,
         state_text = "Rain Thunderstorms",
         city = "Istanbul",
         country = "Turkey",

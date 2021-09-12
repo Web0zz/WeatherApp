@@ -12,4 +12,6 @@
     <string name="wind">Wind</string>
     <string name="humidity">Humidity</string>
     <string name="pressure">Pressure</string>
+    <string name="weather_state_image_for_day">Weather State Image for day</string>
+    <string name="back">Back</string>
 </resources>
