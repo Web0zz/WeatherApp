@@ -13,7 +13,7 @@ data class WeatherData(
     val precipitation: String,
     val pressure: String,
     val hour: String,
-    val date: String,
+    var date: String,
 )
 
 val dummyData = listOf(

@@ -1,5 +1,6 @@
 package com.web0zz.weatherapp
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.web0zz.weatherapp.adapter.WeatherByHourAdapter
@@ -8,23 +9,34 @@ import com.web0zz.weatherapp.data.dummyData
 import com.web0zz.weatherapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-
-    private lateinit var binding: ActivityMainBinding
+    private var _binding: ActivityMainBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        val view = binding.root
-        setContentView(view)
+        _binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        setCurrentWeather(dummyData[0])
-        binding.daysRecyclerView.adapter =
+        val extra: Bundle? = intent.extras
+
+        val date = extra?.getString("DATE")
+
+        setCurrentWeather(dummyData[0].apply { this.date = date ?: this.date })
+
+        binding.byHourRecyclerView.adapter =
             WeatherByHourAdapter(
                 dummyData,
                 WeatherByHourAdapter.WeatherClickListener {
                     setCurrentWeather(it)
                 }
             )
+
+        binding.nextDaysButtonView.setOnClickListener {
+            val intent = Intent(this, ActivityDays::class.java)
+            intent.putExtra("CITY", dummyData[0].city)
+            intent.putExtra("COUNTRY", dummyData[0].country)
+            startActivity(intent)
+        }
     }
 
     private fun setCurrentWeather(weatherData: WeatherData) {
@@ -39,5 +51,10 @@ class MainActivity : AppCompatActivity() {
         binding.windValueTextView.text = weatherData.wind
         binding.humidityValueTextView.text = weatherData.humidity
         binding.pressureValueTextView.text = weatherData.pressure
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
     }
 }

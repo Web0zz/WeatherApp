@@ -21,7 +21,7 @@ class WeatherByDayAdapter(
         with(holder) {
             with(daysList[position]) {
                 binding.daysItemConstraintLayout.setOnClickListener {
-                    onClickListener.onClick(this)
+                    onClickListener.onClick(this.date)
                 }
                 val degreeText = "$degree°"
 
@@ -38,7 +38,7 @@ class WeatherByDayAdapter(
     inner class WeatherByDayViewHolder(val binding: ViewWeatherByDayBinding) :
         RecyclerView.ViewHolder(binding.root)
 
-    class DayClickListener(val clickListener: (weatherByDay: WeatherByDay) -> Unit) {
-        fun onClick(weatherByDay: WeatherByDay) = clickListener(weatherByDay)
+    class DayClickListener(val clickListener: (date: String) -> Unit) {
+        fun onClick(date: String) = clickListener(date)
     }
 }

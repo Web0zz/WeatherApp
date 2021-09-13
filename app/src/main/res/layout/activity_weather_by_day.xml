@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black_background">
+    android:background="@color/black_background"
+    android:fitsSystemWindows="true">
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/back_imageButton"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginStart="18dp"
@@ -62,6 +63,7 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/days_recyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="18dp"
@@ -71,7 +73,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/back_imageButton"
         app:layout_constraintVertical_bias="1.0"
         tools:listitem="@layout/view_weather_by_day" />
 </androidx.constraintlayout.widget.ConstraintLayout>
