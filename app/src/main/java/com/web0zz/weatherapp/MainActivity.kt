@@ -1,7 +1,7 @@
 package com.web0zz.weatherapp
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.web0zz.weatherapp.adapter.WeatherByHourAdapter
 import com.web0zz.weatherapp.data.WeatherData
 import com.web0zz.weatherapp.data.dummyData

@@ -8,8 +8,8 @@ import com.web0zz.weatherapp.databinding.ViewWeatherByHourBinding
 
 class WeatherByHourAdapter(
     private val hoursList: List<WeatherData>,
-    private val onClickListener: WeatherClickListener
-): RecyclerView.Adapter<WeatherByHourAdapter.WeatherByHourViewHolder>() {
+    private val onClickListener: WeatherClickListener,
+) : RecyclerView.Adapter<WeatherByHourAdapter.WeatherByHourViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WeatherByHourViewHolder {
         val binding = ViewWeatherByHourBinding
@@ -17,11 +17,9 @@ class WeatherByHourAdapter(
         return WeatherByHourViewHolder(binding)
     }
 
-    override fun getItemCount() = hoursList.size
-
     override fun onBindViewHolder(holder: WeatherByHourViewHolder, position: Int) {
-        with(holder){
-            with(hoursList[position]){
+        with(holder) {
+            with(hoursList[position]) {
                 binding.hoursWeatherCardView.setOnClickListener {
                     onClickListener.onClick(this)
                 }
@@ -34,8 +32,10 @@ class WeatherByHourAdapter(
         }
     }
 
-    inner class WeatherByHourViewHolder(val binding: ViewWeatherByHourBinding)
-        :RecyclerView.ViewHolder(binding.root)
+    override fun getItemCount() = hoursList.size
+
+    inner class WeatherByHourViewHolder(val binding: ViewWeatherByHourBinding) :
+        RecyclerView.ViewHolder(binding.root)
 
     class WeatherClickListener(val clickListener: (weather: WeatherData) -> Unit) {
         fun onClick(weather: WeatherData) = clickListener(weather)

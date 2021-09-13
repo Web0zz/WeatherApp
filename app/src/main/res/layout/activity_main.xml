@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black_background"
     android:fitsSystemWindows="true"
+    app:layoutDescription="@xml/activity_main_scene"
     tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/background_imageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="350dp"
         android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="25dp"
-        android:src="@drawable/world_map"
+        android:layout_marginBottom="350dp"
         android:alpha="0.2"
+        android:contentDescription="@string/map_content"
+        android:src="@drawable/world_map"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/map_content" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -85,9 +86,9 @@
         android:id="@+id/hour_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik_regular"
         android:textColor="@color/white"
         android:textSize="24sp"
-        android:fontFamily="@font/rubik_regular"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="@+id/background_imageView"
         app:layout_constraintTop_toTopOf="@+id/linearLayout"
@@ -123,10 +124,10 @@
             android:id="@+id/weather_state_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik_light"
             android:textColor="@color/white"
             android:textSize="24sp"
-            android:fontFamily="@font/rubik_light"
-            tools:text="Sunny"/>
+            tools:text="Sunny" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -139,20 +140,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/rubik_regular"
                 android:textColor="@color/white"
                 android:textSize="80sp"
-                android:fontFamily="@font/rubik_regular"
-                tools:text="30"/>
+                tools:text="30" />
 
             <TextView
                 android:id="@+id/degree_dot_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textColor="@color/orange"
+                android:fontFamily="@font/rubik_regular"
                 android:text="@string/degree_dot"
-                android:textSize="80sp"
-                android:fontFamily="@font/rubik_regular" />
+                android:textColor="@color/orange"
+                android:textSize="80sp" />
         </LinearLayout>
     </LinearLayout>
 
@@ -329,23 +330,23 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/rubik_regular"
         android:text="@string/today"
-        android:textSize="20sp"
         android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/next_days_buttonView"
         app:layout_constraintStart_toStartOf="@+id/days_recyclerView"
         app:layout_constraintTop_toTopOf="@+id/next_days_buttonView" />
 
     <Button
         android:id="@+id/next_days_buttonView"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
-        android:textColor="@color/white"
-        android:text="@string/next_7_days"
-        android:textSize="20sp"
-        android:textAllCaps="false"
         android:fontFamily="@font/rubik_regular"
-        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:text="@string/next_7_days"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:icon="@drawable/ic_next_icon"
         app:iconGravity="end"
         app:iconTint="@color/white"
@@ -357,8 +358,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
         android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
         android:layout_marginBottom="30dp"
         android:orientation="horizontal"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -367,5 +368,4 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:itemCount="12"
         tools:listitem="@layout/view_weather_by_hour" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.motion.widget.MotionLayout>

@@ -6,42 +6,42 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginEnd="5dp"
-    app:cardCornerRadius="10dp"
-    app:cardBackgroundColor="@color/light_black_background">
+    app:cardBackgroundColor="@color/light_black_background"
+    app:cardCornerRadius="10dp">
 
     <LinearLayout
         android:id="@+id/weather_by_hour_linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/hour_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:alpha="0.7"
+            android:fontFamily="@font/rubik_regular"
             android:padding="6dp"
             android:textColor="@color/white"
             android:textSize="18sp"
-            android:fontFamily="@font/rubik_regular"
-            android:alpha="0.7"
-            tools:text="12:00"/>
+            tools:text="12:00" />
 
         <ImageView
             android:id="@+id/hour_weather_state_icon_imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/day_weather_state_icon"
-            tools:src="@drawable/ic_partly_cloudy_day_drizzle"/>
+            tools:src="@drawable/ic_partly_cloudy_day_drizzle" />
 
         <TextView
             android:id="@+id/hour_degree_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik_regular"
             android:padding="6dp"
             android:textColor="@color/white"
             android:textSize="18sp"
-            android:fontFamily="@font/rubik_regular"
-            tools:text="28°"/>
+            tools:text="28°" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

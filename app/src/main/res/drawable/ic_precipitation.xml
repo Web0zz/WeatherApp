@@ -5,13 +5,13 @@
     android:viewportWidth="300"
     android:viewportHeight="375"
     tools:ignore="VectorRaster">
-  <path
-      android:fillColor="#FF000000"
-      android:pathData="M202.3,140.8c0,31.3 -25.4,56.8 -56.8,56.8s-56.8,-25.4 -56.8,-56.8s56.8,-124.3 56.8,-124.3S202.3,109.4 202.3,140.8z"/>
-  <path
-      android:fillColor="#FF000000"
-      android:pathData="M267.1,241.3c0,17.2 -13.9,31.2 -31.2,31.2s-31.2,-13.9 -31.2,-31.2s31.2,-68.2 31.2,-68.2S267.1,224.1 267.1,241.3z"/>
-  <path
-      android:fillColor="#FF000000"
-      android:pathData="M83,235.5c0,11.4 -9.2,20.6 -20.6,20.6s-20.6,-9.2 -20.6,-20.6c0,-11.4 20.6,-45 20.6,-45S83,224.1 83,235.5z"/>
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M202.3,140.8c0,31.3 -25.4,56.8 -56.8,56.8s-56.8,-25.4 -56.8,-56.8s56.8,-124.3 56.8,-124.3S202.3,109.4 202.3,140.8z" />
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M267.1,241.3c0,17.2 -13.9,31.2 -31.2,31.2s-31.2,-13.9 -31.2,-31.2s31.2,-68.2 31.2,-68.2S267.1,224.1 267.1,241.3z" />
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M83,235.5c0,11.4 -9.2,20.6 -20.6,20.6s-20.6,-9.2 -20.6,-20.6c0,-11.4 20.6,-45 20.6,-45S83,224.1 83,235.5z" />
 </vector>
