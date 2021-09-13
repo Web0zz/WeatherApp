@@ -19,9 +19,9 @@ class MainActivity : AppCompatActivity() {
 
         val extra: Bundle? = intent.extras
 
-        val date = extra?.getString("DATE")
+        val currentDate = extra?.getString("DATE")
 
-        setCurrentWeather(dummyData[0].apply { this.date = date ?: this.date })
+        setCurrentWeather(dummyData[0].apply { this.date = currentDate ?: this.date })
 
         binding.byHourRecyclerView.adapter =
             WeatherByHourAdapter(

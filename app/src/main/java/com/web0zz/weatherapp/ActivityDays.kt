@@ -38,7 +38,8 @@ class ActivityDays : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        startActivity(Intent(this, MainActivity::class.java))
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
     }
 
     private fun onClickDay(date: String) {
